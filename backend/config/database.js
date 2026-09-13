@@ -1,0 +1,1 @@
+const mongoose=require("mongoose");let connected=false;async function connectDB(){if(!process.env.MONGODB_URI){console.log("MongoDB URI not set — using in-memory demo store.");return false}await mongoose.connect(process.env.MONGODB_URI);connected=true;console.log("MongoDB connected");return true}module.exports={connectDB,connected:()=>connected};

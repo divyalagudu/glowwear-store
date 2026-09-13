@@ -1,0 +1,1 @@
+const mongoose=require("mongoose");module.exports=mongoose.model("Order",new mongoose.Schema({userId:mongoose.Schema.Types.ObjectId,items:Array,total:Number,shipping:Object,paymentMethod:String,paymentStatus:{type:String,default:"pending"},razorpayOrderId:String,status:{type:String,default:"placed"}},{timestamps:true}));
